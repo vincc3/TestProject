@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="panel panel-primary">
+
+        <div class="panel-heading"><strong>Project</strong></div>
+        <div class="panel-body">
+            <div>
+                <p>Project Name: {{ currentProject.ProjectName }}</p>
+                <p>Project ID: {{ currentProject.Id }}</p>
+            </div>
+            <div class="table table-responsive">
+                <div class="panel-heading"><strong>Project Members:</strong></div>
+                <table class="table table-striped">
+                    <thead style="background-color:cyan; font-weight:bold;">
+                        <tr>
+                            <td>ID</td>
+                            <td>Name</td>
+                            <td>Title</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="member in members">
+                            <td>{{member.Id}}</td>
+                            <td>{{member.Name}}</td>
+                            <td>{{member.Title}}</td>
+                            <td>
+                                <a class="btn btn-primary" ng-click="deleteMember(member.Id, currentProject.Id)">
+                                    Leave this Project
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table table-responsive">
+                <div class="panel-heading"><strong>Other Contact:</strong></div>
+                <table class="table table-striped">
+                    <thead style="background-color:greenyellow; font-weight:bold;">
+                        <tr>
+                            <td>ID</td>
+                            <td>Name</td>
+                            <td>Title</td>
+                            <td>Project</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="contact in otherContacts">
+                            <td>{{contact.Id}}</td>
+                            <td>{{contact.Name}}</td>
+                            <td>{{contact.Title}}</td>
+                            <td>{{contact.Project.ProjectName}}</td>
+                            <td>
+                                <a class="btn btn-primary" ng-click="addMember(currentProject.Id, contact.Id)">
+                                    Join this Project
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

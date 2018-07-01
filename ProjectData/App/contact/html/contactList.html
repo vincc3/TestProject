@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="panel panel-primary">
+
+        <div class="panel-heading"><strong>Contacts</strong></div>
+        <div class="panel-body">
+            <div class="col-md-6">
+                <a class="btn btn-primary" href="#/mycontacts/newcontact"><i class="glyphicon glyphicon-file"></i> New</a>
+            </div><br /><br />
+            <div class="table table-responsive">
+                <table class="table table-bordered">
+                    <thead style="background-color:cyan; font-weight:bold;">
+                        <tr>
+                            <td>ID</td>
+                            <td>Name</td>
+                            <td>Title</td>
+                            <td>Email</td>
+                            <td>Project</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="contact in contacts">
+                            <td>{{contact.Id}}</td>
+                            <td>{{contact.Name}}</td>
+                            <td>{{contact.Title}}</td>
+                            <td>{{contact.Email}}</td>
+                            <td>{{contact.Project.ProjectName}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
