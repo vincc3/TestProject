@@ -2,8 +2,9 @@ Test Program: ProjectData
 
 How to Run:
 1. Use Visual Studio 2017 to open ProjectData.sln
-2. Start Debugging (click F5) to start the program by IISExpress
-3. There are 5 major pages: Projects list, Project detail to edit members, Add new Project, Contacts list, Add new Contact.
+2. Rebuild all (because all files under "bin" are removed for reducing the size)
+3. Start Debugging (click F5) to start the program by IISExpress
+4. There are 5 major pages: Projects list, Project detail to edit members, Add new Project, Contacts list, Add new Contact.
 
 Key features: 
 1. ProjectData.sln is a project of Visual Studio 2017
